@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Informacion de la pagina para los navegadores -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <title>Empleado</title>
+  </head>
+  <!-- contenido de la pagina que ven lo usuarios -->
+  <body>
+    <!--* encabezado(logo-menu-titulo) del sitio -->
+    <header class="header">
+      <nav class="navegacion">
+        <a href="../index.html" class="logo">
+          <img src="../img/logo.png" width="50px" alt="logo">
+          <div class="logo">
+            Rol de Pagos
+          </div>
+        </a>
+        <ul class="menu">
+          <li><a href="./cargo.html">Cargos</a></li>
+          <li><a href="./departamento.html">Departamentos</a></li>
+          <li><a href="./empleado.html">Empleados</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="form-container">
+    <div class="form-header" >
+      <h1>Formulario de Empleados</h1>
+    </div>
+    <form id="form-cargo" class="form">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Ingrese un Nombre"
+          value=""
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="cedula">Cedula</label>
+        <input
+          type="text"
+          name="cedula"
+          id="cedula"
+          placeholder="ingrese cedula"
+          value=""
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <select name="cargo" id="cargo">
+            <option value="value1" >Cargo 1</option>
+            <option value="value2" selected>Cargo 2</option>
+            <option value="value3">Cargo 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="departamento" >Departamento</label>
+        <select name="departamento" id="departamento">
+            <option value="value1" selected>departamento 1</option>
+            <option value="value2">departamento 2</option>
+            <option value="value3">departamento 3</option>
+        </select>
+      </div>
+       <div class="form-group">
+        <label for="sueldo">Sueldo</label>
+        <input
+          type="text"
+          name="sueldo"
+          id="sueldo"
+          placeholder="ingrese sueldo"
+          value=""
+          required
+        />
+      </div>
+      <div class="form-check">
+      <label>Activo
+        <input type="checkbox" id="activo" checked />
+      </label>
+    </div>
+    <button
+      id="enviar"
+      type="submit"
+      name="enviar">
+      Grabar
+    </button>
+    </form>
+    <div class="consulta none table-responsive" id="consulta">
+      <h2>Listado de Empleados</h2>
+      <table class="consulta-est" id="consulta-est" border="1">
+        <thead>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Cedula</th>
+          <th>Cargo</th>
+          <th>Departamento</th>
+          <th>Sueldo</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </thead>
+        <tbody class="detalle-est" id="detalle-est">
+          <tr>
+            <td>1</td>
+            <td>Daniel Vera</td>
+            <td>0914192182</td>
+            <td>Informatico</td>
+            <td>Sistemas</td>
+            <td>1000</td>
+            <td>Activo</td>
+            <td class="acciones">
+              <button>✏️</button>
+              <button>❌</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Erick Vera</td>
+            <td>0914192783</td>
+            <td>Junior</td>
+            <td>Tics</td>
+            <td>500.50</td>
+            <td>Activo</td>
+            <td class="acciones">
+              <button>✏️</button>
+              <button>❌</button>
+            </td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>    
+  </section>
+    </main>
+  </body>
+</html>
